@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 4 Exercise 1</title>
+        <style>
+            form {
+                display: table;
+            }
+            p {
+                display: table-row;
+            }
+            label {
+                display: table-cell;
+            }
+            input {
+                display: table-cell;
+            }
+        </style>
+    </head>
+    <script>
+        function showAdd() {
+            // Create a variable for the result of the addition
+            var num1=parseFloat(document.getElementById("number1").value);
+            var num2=parseFloat(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=num1+num2;
+        }
+        function showMult(){
+            var num1=parseFloat(document.getElementById("number1").value);
+            var num2=parseFloat(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=num1*num2;
+        }  
+    </script>
+    <body>
+        <form name="addform">
+            <div>
+                <label>Number 1:</label>
+                <input type="number" id="number1" value="" step="0.001">
+            </div>
+            <div>
+                <label>Number 2:</label>
+                <input type="number" id="number2" value="" step="0.001">
+                <input type="button" value="add" onclick="return showAdd()">
+                <input type="button" value="multiply" onclick="return showMult()">
+            </div>
+            <div>
+                <label>Result:</label>
+                <div id="result"></div>
+            </div>
+        </form>
+     </body>
+</html>
